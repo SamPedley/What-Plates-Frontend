@@ -1,0 +1,43 @@
+@import 'normalize.css';
+
+:global(:root) {
+  --color-white:        #ffffff;
+  --color-cinnabar:     #F44336;
+  --color-shaft:        #1F1F1F;
+  --color-gallery:      #EDEDED;
+  --color-teal:         #009688;
+  --color-indago:       #3F51B5;
+  --color-purple:       #673AB7;
+}
+
+
+* { box-sizing: border-box; }
+
+body, html, :global(#App) { height: 100%; }
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+h1,h2,h3,h4
+{
+  font-weight: normal;
+}
+hr
+{
+  border-top: 1px solid rgba(158, 158, 158, 0.5);
+  border-bottom: none;
+}
+img
+{
+  width: 100%;
+  height: auto;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
