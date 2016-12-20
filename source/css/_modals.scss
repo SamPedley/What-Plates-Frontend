@@ -1,0 +1,29 @@
+.modal_help-title
+{
+	color: $white !important;
+	background-color: $color-teal;
+}
+
+.modal_help-buttons
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top:50px;
+}
+
+.modal_options-title
+{
+  color: $white !important;
+  background-color: $background;
+}
+
+.modal_options-subtitle
+{
+  margin: 10px 2.5% 0;
+}
+
+.modal_options-hr
+{
+  margin: 15px 0;
+}

@@ -1,0 +1,139 @@
+.header_container
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* height: 50vh; */
+	/* min-height: 350px; */
+	padding: 50px 0;
+	padding: 6vh 0;
+	background: url('/images/bg2.jpg');
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+@media only screen and (max-width : 550px) {
+	padding: 25px 0;
+}
+}
+.header_options-item
+{
+	@media only screen and (max-width : 650px) {
+		margin-top: 0.5rem;
+	}
+}
+.header_sections{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	align-items: stretch;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.header_input-container, .header_weight, .header_options-container
+{
+	background: white;
+	padding: 30px 30px 10px 30px;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.12);
+	border: solid 1px #e0e0e0;
+	@media only screen and (max-width : 650px) {
+	}
+}
+
+.header_sets-container
+{
+	padding-top: 5px;
+}
+
+
+
+.header_select-container
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media only screen and (max-width : 550px) {
+		display: block;
+		border-top: 1px solid $color-gallery;
+		margin-top:10px;
+		padding-top: 0;
+	}
+
+}
+.header_select-item
+{
+	margin: 5px 2%;
+}
+.header_weight-container
+{
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+
+	@media only screen and (max-width : 550px) {
+		display: block;
+	}
+
+}
+
+.header_setBox
+{
+	order: 2;
+	margin: 5px;
+	@media only screen and (max-width : 650px) {
+		order:3;
+		width: 100%;
+		margin: 10px;
+	}
+}
+
+.header_options{
+	order: 3;
+	@media only screen and (max-width : 650px) {
+		order:1;
+	}
+}
+.header_weight-wrap{
+	order: 1;
+	@media only screen and (max-width : 650px) {
+		order: 2;
+	}
+}
+.header_options, .header_weight-wrap{
+	margin: 5px;
+	@media only screen and (max-width : 650px) {
+		width: 100%;
+		margin: 10px;
+	}
+}
+.header_options-container{
+	text-align: left;
+}
+.header_options_button div
+{
+	width: 100%;
+}
+.header_save-container
+{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	@media only screen and (max-width : 650px) {
+		display: none;
+	}
+}
+
+.header_button-container
+{
+	width: 50%;
+	float: left;
+	// 	@media only screen and (max-width : 650px) {
+	// 	width: 100%;
+	// }
+
+}

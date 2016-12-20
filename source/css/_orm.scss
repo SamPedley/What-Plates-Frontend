@@ -1,0 +1,71 @@
+.orm-percentage-results
+{
+  background: $color-gallery;
+  min-width: 70px;
+  width: 14.4%;
+  margin: 1%;
+  text-align: center;
+  box-sizing: border-box;
+  h4
+  {
+    margin: 0;
+    color: white;
+    background: $color-purple;
+    padding: 5px 0;
+
+  }
+  p
+  {
+    margin: 0;
+    font-weight: bold;
+    padding: 5px 0;
+    // padding: 10px;
+
+  }
+}
+
+.orm_input
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.orm_results
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.orm_rm
+{
+  text-align: center;
+}
+
+.orm_formula
+{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.orm_at-thing
+{
+  margin: 0;
+  @media only screen and (max-width : 800px) {
+  	width: 100%;
+    text-align: center;
+  }
+}
+
+h2.orm_at-thing
+{
+  @media only screen and (max-width : 800px) {
+    margin-bottom: -50px;
+  }
+}

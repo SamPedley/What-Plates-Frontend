@@ -1,44 +1,69 @@
-const {resolve} = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+var webpack = require('webpack');
+var path = require('path');
+var _ = require('lodash');
 
-module.exports = env => ({
-  context: resolve('source'),
+const base = {
+     context: path.join(__dirname,'source'),
+     output: {
+      path: path.join(__dirname,'public'),
+      publicPath: '/',
+      filename: 'bundle.js'
+    },
+    resolve: {
+        modulesDirectories: [
+            'node_modules',
+            'source/js'
+        ]
+    }
+}
 
-  entry: './app.js',
+const development = {
+    devtool: 'eval',
+    devServer:{
+      contentBase: path.join(__dirname,'public')
+    },
+    entry: [
+      'webpack/hot/dev-server',
+      'webpack-hot-middleware/client',
+      './js/index.js',
+      './css/styles.scss'
+    ],
+    plugins: [
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoErrorsPlugin()
+    ],
+    module: {
+      loaders: [
+        { test: /\.js?$/, exclude: /node_modules/, loaders: ['react-hot','babel'] },
+        { test: /\.css$/, exclude: /node_modules/, loader: 'style-loader!css-loader' },
+        { test: /\.scss$/, exclude: /node_modules/, loader: 'style!css!sass' },
+      ]
+    }
+  };
 
-  devServer: {
-    historyApiFallback: true
-  },
-
-  output: {
-    filename: 'bundle.js',
-    path: resolve('public'),
-    publicPath: '/'
-  },
-
-  stats: {
-    colors: true,
-    reasons: true,
-    chunks: true
-  },
-
-  resolve: {
-    extensions: ['.js', '.jsx'],
-    modules: [resolve('source'), 'node_modules']
-  },
-
-  module: {
-    loaders: [
-        { test: /\.js/, exclude: /node_modules/, loaders: ['babel-loader'] },
-      {
-        test: /\.css/,
-        exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract({ loader: 'css-loader?modules&importLoaders=1!postcss-loader' })
+const production = {
+    entry: [
+      './js/index.js',
+      './css/styles.scss'
+    ],
+    plugins: [
+      new webpack.optimize.OccurenceOrderPlugin(),
+      new webpack.NoErrorsPlugin(),
+      new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
       }
-    ]
-  },
+    })
+    ],
+    module: {
+      loaders: [
+        { test: /\.js?$/, exclude: /node_modules/, loaders: ['babel'] },
+        { test: /\.css$/, exclude: /node_modules/, loader: 'style-loader!css-loader' },
+        { test: /\.scss$/, exclude: /node_modules/, loader: 'style!css!sass' },
+      ]
+    }
+  };
 
-  plugins: [ new ExtractTextPlugin('styles.css') ],
 
-  devtool: env.prod ? 'source-map' : 'eval'
-})
+module.exports = Object.assign({}, base, _.includes(process.argv, '--development') ? development : production )

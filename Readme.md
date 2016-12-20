@@ -1,20 +1,11 @@
-WhatPlates.com
-==============
+# What Plates
+A web app for gains without math.
 
-***--- CURRENTLY BEING REFACTORED ---***
+### Uses:
+* [React](https://facebook.github.io/react/)
+* [Material UI](http://www.material-ui.com/)
+* [Materialize css](http://materializecss.com/)
+* [Images from Pixabay](https://pixabay.com/)
 
-[![Build Status](https://travis-ci.org/SamPedley/What-Plates-Frontend.svg?branch=master)](https://travis-ci.org/SamPedley/What-Plates-Frontend) [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-
-## Using:
-
-### [Standard.js](http://standardjs.com/)
-
-### [Jest](https://facebook.github.io/jest/) & [Enzyme](http://airbnb.io/enzyme/)
-
-### [React](https://facebook.github.io/react/) & [React Router](https://github.com/ReactTraining/react-router)
-
-### [Redux](http://redux.js.org/)
-
-### [PostCSS](http://postcss.org/)
-
-### [Webpack 2](https://webpack.js.org/)
+-------
+# IMPORTANT: This is the old version of the app. 

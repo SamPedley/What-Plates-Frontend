@@ -1,0 +1,142 @@
+.setResults_container
+{
+	box-sizing: border-box;
+	padding: 0;
+	float: left;
+	margin: 10px;
+	width: calc(100% - 320px);
+	@media screen and (max-width : 880px) {
+		width: calc(100% - 245px);
+	}
+	@media screen and (max-width : 650px) {
+		width: calc(100% - 20px);
+	}
+}
+
+
+.set_results-container{
+	border: 2px solid $color-teal;
+	background: lighten(#EDEDED,90);
+	margin-bottom: 1rem;
+
+	.set_title{
+		background: $color-teal;
+		color: white;
+		margin: 0;
+		padding:5px 10px;
+	}
+	&:nth-child(odd)
+	{
+		border-color: $color-indago;
+		.set_title{background: $color-indago;}
+		background: lighten(#EDEDED,10);
+
+	}
+	.results_list{
+		padding: 0 5px;
+	}
+}
+
+
+
+
+
+
+.results_container
+{
+	box-sizing: border-box;
+	padding: 0 0 10px 10px;
+	float: left;
+	width: calc(100% - 300px);
+	@media screen and (max-width : 880px) {
+		width: calc(100% - 225px);
+	}
+	@media screen and (max-width : 650px) {
+		width: calc(100% - 20px);
+		margin: 10px;
+		padding: 0;
+	}
+}
+.results_list
+{
+	box-sizing: border-box;
+}
+.result_list-title{
+	background: $color-gallery;
+	width: 100%;
+	margin: 0 0 0 0;
+	padding: 5px 0;
+	text-align: center;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.12);
+	border: solid 1px #e0e0e0;
+	box-sizing: border-box;
+}
+.results_item
+{
+	float: left;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.12);
+	border: solid 1px #e0e0e0;
+	box-sizing: border-box;
+	width: 31%;
+	margin: 10px 1%;
+
+}
+.results_item-title
+{
+	background-color: rgba(232, 232, 232, 1.0);
+	color: rgba(38, 38, 38, 1.0);
+	margin: 0;
+	padding: 5px;
+	text-align: center;
+}
+.results_banner
+{
+	width: 100%;
+	width: calc(100% - 20px);
+	margin: 10px 10px 0 10px;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.12);
+	border: solid 1px #e0e0e0;
+	color: white;
+	text-align: center;
+	padding: 5px 0;
+	&.up{
+		background-color: $color-teal;
+	}
+	&.down{
+		background-color: $color-purple;
+	}
+	&.error{
+		background-color: rgba(214, 69, 65, 1.0);
+		font-size: 32px;
+	}
+	&.default{
+		color: rgba(38, 38, 38, 1.0);
+	}
+}
+
+
+@media screen and (max-width : 650px) {
+	.results_item
+	{
+		width: 100%;
+		width: 100%;
+		display: inline-flex;
+		height: 80px;
+		background-color: rgba(232, 232, 232, 1.0);
+		margin: 10px 0;
+
+
+		img
+		{
+			width: 80px;
+
+		}
+		.results_item-title
+		{
+			align-self: center;
+			width: calc(100% - 80px);
+
+		}
+	}
+
+}
