@@ -4,6 +4,8 @@ node_js:
 env:
   - CXX=g++-4.8
 addons:
+  code_climate:
+    repo_token: 6aa7d31716bb61ed1e576f096233bd3f475df4c48595e8cda560a90a0fb01164
   apt:
     sources:
       - ubuntu-toolchain-r-test
@@ -12,3 +14,6 @@ addons:
 script:
   - npm run lint
   - npm run test
+after_success:
+  - npm install -g codeclimate-test-reporter
+  - codeclimate-test-reporter < lcov.info
