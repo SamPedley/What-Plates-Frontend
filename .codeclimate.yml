@@ -1,0 +1,3 @@
+exclude_paths:
+- "postcss.config.js"
+- "source/**/*.spec.js"
