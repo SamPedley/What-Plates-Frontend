@@ -1,9 +1,15 @@
 import { combineReducers } from 'redux'
 
 import ui from './ui'
-import calculate from './calculate'
+import userSettings from './userSettings'
+import sets from './sets'
+import plates from './plates'
+import bars from './bars'
 
 export default combineReducers({
   ui,
-  calculate
+  userSettings,
+  sets,
+  plates,
+  bars
 })
