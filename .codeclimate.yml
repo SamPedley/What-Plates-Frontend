@@ -1,3 +1,23 @@
+---
+engines:
+  csslint:
+    enabled: true
+    channel: "eslint-3"
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "**.css"
+  - "**.js"
+  - "**.jsx"
+  - "**.module"
 exclude_paths:
 - "postcss.config.js"
 - "source/**/*.spec.js"
