@@ -7,6 +7,7 @@
     "dev": "webpack-dev-server --content-base public/  --env.dev",
     "test": "jest",
     "test:watch": "jest --watch",
+    "lint:fix": "standard --fix",
     "lint": "standard --verbose | snazzy"
   },
   "author": "Sam Pedley",

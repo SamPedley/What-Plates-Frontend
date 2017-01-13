@@ -18,3 +18,33 @@ WhatPlates.com
 ### [PostCSS](http://postcss.org/)
 
 ### [Webpack 2](https://webpack.js.org/)
+
+---
+
+```
+  user: {
+    name: '',
+    email: ''
+  },
+  userSettings: {
+    usingLbs: true || false,
+    showConversion: true || false,
+    roundUp: tue || false,
+  },
+      sets: [
+      { totalWeight: 100 }
+    ],
+    plates: [
+      {isLbs: false, weight: 45}
+    ]
+    barTypes: [
+      {name: 'Mens', inLbs: 45, inKg: 20}
+    ],
+
+  ui: {
+    menuOpen: false,
+    helpModalOpen: false,
+  }
+
+}
+```
