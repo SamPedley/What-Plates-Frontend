@@ -6,6 +6,7 @@ WhatPlates.com
 [![Code Climate](https://codeclimate.com/github/SamPedley/What-Plates-Frontend/badges/gpa.svg)](https://codeclimate.com/github/SamPedley/What-Plates-Frontend)
 
 ---
+
 ### Using:
 
 * [Standard.js](http://standardjs.com/)
@@ -15,6 +16,7 @@ WhatPlates.com
 * [Material-ui](http://www.material-ui.com/)
 * [PostCSS](http://postcss.org/)
 * [Webpack 2](https://webpack.js.org/)
+
 ---
 
 ``` JavaScript
