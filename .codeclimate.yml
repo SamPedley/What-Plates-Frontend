@@ -2,7 +2,6 @@
 engines:
   csslint:
     enabled: true
-    channel: "stable"
   duplication:
     enabled: true
     config:
@@ -10,6 +9,7 @@ engines:
       - javascript
   eslint:
     enabled: true
+    channel: "eslint-3"
   fixme:
     enabled: true
 ratings:
