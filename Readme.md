@@ -41,11 +41,19 @@ WhatPlates.com
   ],
 
   plates: [
-    { isLbs: BOOLEAN, weight: BOOLEAN }
+    {
+      isLbs: BOOLEAN,
+      weight: BOOLEAN,
+      isActive: BOOLEAN
+    }
   ],
 
   bars: [
-    { name: STRING, inLbs: FLOAT, inKg: FLOAT }
+    {
+      name: STRING,
+      inLbs: FLOAT,
+      inKg: FLOAT 
+    }
   ],
 
   ui: {
