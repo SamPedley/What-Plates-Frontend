@@ -1,10 +1,10 @@
 import React from 'react'
 
-import InputContainer from 'components/InputContainer'
+import Plate from 'components/Plate'
 
 const Home = () => (
   <div>
-    <InputContainer />
+    <Plate weight='45' isLbs={false} />
   </div>
 )
 
