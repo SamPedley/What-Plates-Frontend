@@ -1,4 +1,4 @@
-const {resolve} = require('path')
+const { resolve } = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = env => ({
@@ -7,11 +7,14 @@ module.exports = env => ({
   entry: './app.js',
 
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    noInfo: false,
+    stats: 'minimal'
   },
 
   output: {
     filename: 'bundle.js',
+    // sourceMapFilename: '[name].map',
     path: resolve('public'),
     publicPath: '/'
   },

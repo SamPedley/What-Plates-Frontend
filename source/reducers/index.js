@@ -13,3 +13,18 @@ export default combineReducers({
   plates,
   bars
 })
+
+const getActivePlates = state => state.plates.filter(
+  (plate) => plate.active && plate.isLbs === state.userSettings.usingLbs
+)
+
+export const getCalcDeps = state => ({
+  userSettings: state.userSettings,
+  plates: getActivePlates(state),
+  sets: state.sets
+})
+
+export const getPossibleBars = state => ({
+  bars: state.bars.filter((item) => item.isLbs === state.userSettings.usingLbs)
+})
+

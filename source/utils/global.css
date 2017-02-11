@@ -8,6 +8,7 @@
   --color-teal:         #009688;
   --color-indago:       #3F51B5;
   --color-purple:       #673AB7;
+  --color-bayoux:       #455C7B;
 }
 
 
@@ -25,15 +26,22 @@ h1,h2,h3,h4
 {
   font-weight: normal;
 }
+
 hr
 {
   border-top: 1px solid rgba(158, 158, 158, 0.5);
   border-bottom: none;
 }
+
 img
 {
   width: 100%;
   height: auto;
+}
+
+a
+{
+  text-decoration: none;
 }
 
 input[type=number]::-webkit-inner-spin-button,

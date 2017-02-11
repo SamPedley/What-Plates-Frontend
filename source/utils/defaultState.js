@@ -5,17 +5,30 @@ export const ui = {
 export const userSettings = {
   usingLbs: true,
   showConversion: false,
-  roundUp: false
+  roundUp: false,
+  usePercent: true
 }
 
 export const sets = [
-  { total: 0 }
+  { total: 45, percent: 100 },
+  { total: 55, percent: 100 }
 ]
 export const bars = [
-  { name: 'Mens', inLbs: 45, inKg: 20 },
-  { name: 'Womens', inLbs: 35, inKg: 15 },
-  { name: 'Training', inLbs: 15, inKg: 10 }
+  { name: 'Mens', isLbs: true, weight: 45, active: true },
+  { name: 'Womens', isLbs: true, weight: 35, active: false },
+  { name: 'Training', isLbs: true, weight: 15, active: false },
+  { name: 'Mens', isLbs: false, weight: 20, active: false },
+  { name: 'Womens', isLbs: false, weight: 15, active: false },
+  { name: 'Training', isLbs: false, weight: 10, active: false }
 ]
+
+// Based off Rouge plates
+export const plateColors = {
+  red: '#B44846', // 55lbs
+  blue: '#005182', // 45lbs
+  yellow: '#E9B501', // 35lbs
+  green: '#308E35' // 25lbs
+}
 
 export const plates = [
   // Lbs Plates

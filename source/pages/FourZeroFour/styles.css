@@ -1,0 +1,19 @@
+.container
+{
+  text-align: center;
+  margin: 2rem 0.25rem;
+}
+
+.title
+{
+  margin: 0;
+  padding: 0;
+  font-size: 4rem;
+}
+
+.subtitle
+{
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}

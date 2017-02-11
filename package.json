@@ -45,6 +45,7 @@
     "react-dom": "^15.4.1",
     "react-redux": "^5.0.2",
     "react-router": "^4.0.0-alpha.6",
+    "react-router-dom": "^4.0.0-beta.5",
     "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.6.0"
   },
@@ -53,7 +54,9 @@
       "es2015",
       "react"
     ],
-    "plugins": ["transform-object-rest-spread"]
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
   },
   "jest": {
     "moduleNameMapper": {

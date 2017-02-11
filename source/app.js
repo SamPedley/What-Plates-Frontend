@@ -9,21 +9,14 @@ import 'utils/global.css'
 
 import reducer from 'reducers'
 import Router from 'routes.js'
-import Header from 'components/Header/Container'
-import Footer from 'components/Footer'
 
 injectTapEventPlugin()
-
-let store = createStore(reducer)
+const store = createStore(reducer)
 
 render(
   <Provider store={store} >
     <MuiThemeProvider>
-      <div>
-        <Header />
-        <Router />
-        <Footer />
-      </div>
+      <Router />
     </MuiThemeProvider>
   </Provider>,
   document.getElementById('App')

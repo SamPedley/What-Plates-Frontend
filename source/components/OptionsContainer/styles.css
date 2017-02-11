@@ -1,0 +1,16 @@
+.container
+{
+  width: 250px;
+  background: var(--color-white);
+}
+
+.header
+{
+  background: var(--color-cinnabar);
+  color: var(--color-white);
+  margin: 0;
+  padding: 0.5rem 0.25rem;
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+}

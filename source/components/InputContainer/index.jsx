@@ -1,24 +1,32 @@
 import React from 'react'
-import TextField from 'material-ui/TextField'
 import { connect } from 'react-redux'
-import Paper from 'material-ui/Paper'
+import FloatingActionButton from 'material-ui/FloatingActionButton'
+import ContentAdd from 'material-ui/svg-icons/content/add'
 
-import { updateWeight } from 'actions'
+import InputItem from 'components/InputItem'
+import { updateSet, addSet, removeSet } from 'actions'
 import s from './styles.css'
 
-const InputContainer = ({updateWeight, weight}) => (
+export const InputContainer = ({ sets, usingLbs, updateSet, addSet, removeSet }) => (
   <section className={s.container}>
-    <Paper>
-      <h3>What Plates</h3>
-      <TextField
-        id='name'
-        type='number'
-        onChange={updateWeight}
-        value={weight}
-        />
-    </Paper>
+    {
+      sets.map((item, index) => <InputItem
+        index={index}
+        set={item}
+        usingLbs={usingLbs}
+        remove={() => removeSet(index)}
+        onChange={(input) => updateSet(index, input)}
+        key={`input-container-${index}`} />)
+    }
+
+    <FloatingActionButton
+      onClick={() => addSet()}
+      secondary
+      mini>
+      <ContentAdd />
+    </FloatingActionButton>
   </section>
 )
-const mapStateToProps = (state) => ({ weight: state.calculate.sets[0].weight })
+const mapStateToProps = (state) => ({ sets: state.sets, usingLbs: state.userSettings.usingLbs })
 
-export default connect(mapStateToProps, {updateWeight})(InputContainer)
+export default connect(mapStateToProps, {updateSet, addSet, removeSet})(InputContainer)

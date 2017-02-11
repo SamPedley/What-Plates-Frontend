@@ -1,0 +1,40 @@
+.container
+{
+  border: 2px solid var(--color-teal);
+  margin: 0.5rem;
+}
+
+.header
+{
+  background: var(--color-teal);
+  color: var(--color-white);
+  margin: 0;
+  padding: 0.25rem;
+}
+
+.platesWrapper
+{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.errorContainer
+{
+  color: var(--color-cinnabar);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1.5rem 0.5rem;
+}
+.errorTitle
+{
+  margin: 0;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.subTitle
+{
+  margin: 0;
+  font-size: 0.5rem;
+}

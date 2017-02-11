@@ -1,6 +1,6 @@
 node_modules
-public/bundle.*
-public/styles.*
+public/*bundle.*
+public/*styles.*
 npm-debug.log
 .vscode/*
 coverage

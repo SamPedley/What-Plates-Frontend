@@ -1,7 +1,8 @@
 import reducer from './sets'
+import { sets as DEFAULT_STATE } from 'utils/defaultState'
 
 it('should return the initial state', () => {
-  expect(reducer(undefined, {})).toEqual([{ total: 0 }])
+  expect(reducer(undefined, {})).toEqual(DEFAULT_STATE)
 })
 
 it('should add a task', () => {

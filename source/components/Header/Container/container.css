@@ -2,5 +2,21 @@
 {
   width: 100%;
   height: auto;
-  background: var(--color-indago);
+  background: var(--color-bayoux);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wp
+{
+  color: white;
+  text-transform: uppercase;
+  margin: auto 16px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.menuIcon
+{
+
 }

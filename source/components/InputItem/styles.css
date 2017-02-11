@@ -1,0 +1,51 @@
+.container
+{
+  background: var(--color-white);
+  margin: 0.5rem;
+  position: relative;
+}
+
+.close
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  width: 25px;
+  height: 20px;
+  padding-top: 2px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+.close:hover, .close:active
+{
+  background: var(--color-cinnabar);
+}
+
+
+.inputWrapper
+{
+  padding: 0 0.5rem;
+  display: flex;
+  min-width: 200px;
+  justify-content: center;
+}
+
+.input
+{
+  width: 100px !important;
+}
+
+.input input
+{
+  text-align: center;
+}
+
+.weightType
+{
+margin-left: 0.5rem;
+}
