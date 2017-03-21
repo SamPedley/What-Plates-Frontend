@@ -5,8 +5,10 @@ import userSettings from './userSettings'
 import sets from './sets'
 import plates from './plates'
 import bars from './bars'
+import user from './user'
 
 export default combineReducers({
+  user,
   ui,
   userSettings,
   sets,
@@ -27,4 +29,3 @@ export const getCalcDeps = state => ({
 export const getPossibleBars = state => ({
   bars: state.bars.filter((item) => item.isLbs === state.userSettings.usingLbs)
 })
-

@@ -1,8 +1,5 @@
 import React from 'react'
 import TextField from 'material-ui/TextField'
-import FlatButton from 'material-ui/FlatButton'
-import ContentClear from 'material-ui/svg-icons/content/clear'
-import Slider from 'material-ui/Slider'
 import CloseIcon from 'material-ui/svg-icons/navigation/close'
 
 import s from './styles.css'
@@ -26,7 +23,7 @@ export class InputItem extends React.Component {
   }
 
   render () {
-    const {set, remove, onChange, usingLbs = true} = this.props
+    const {set, usingLbs = true} = this.props
     return (
       <section className={s.container}>
         <button className={s.close}>

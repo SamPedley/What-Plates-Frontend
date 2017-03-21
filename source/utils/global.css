@@ -49,3 +49,18 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+:global(#ApplicationWrapper)
+{
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+:global(#ApplicationContent)
+{
+  width: 100%;
+  flex-grow: 1;
+}

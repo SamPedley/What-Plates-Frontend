@@ -1,26 +1,29 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
-import Header from 'components/Header/Container'
-import Footer from 'components/Footer'
-
+import { PrivateRoute, PublicOnlyRoute } from 'utils/RouteHelpers'
 import Home from 'pages/Home'
-import About from 'pages/About'
-import FourZeroFour from 'pages/FourZeroFour'
+import Options from 'pages/Options'
+import Register from 'pages/Auth/Register'
+import Login from 'pages/Auth/Login'
+import Logout from 'pages/Auth/Logout'
+import About from 'pages/Static/About'
+import PrivacyPolicy from 'pages/Static/PrivacyPolicy'
+import FourZeroFour from 'pages/Static/FourZeroFour'
 
-
-const Router = () => (
-  <BrowserRouter>
-    <main>
-      <Header />
-      <Switch>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/about' component={About} />
-        <Route component={FourZeroFour} />
-      </Switch>
-      <Footer />
-    </main>
-  </BrowserRouter>
+const Routes = () => (
+  <Switch>
+    <Route exact path='/' component={Home} />
+    <Route exact path='/options' component={Options} />
+    {/* ---------- Auth Routes ---------- */}
+    <PublicOnlyRoute exact path='/register' component={Register} />
+    <PublicOnlyRoute exact path='/login' component={Login} />
+    <Route exact path='/logout' component={Logout} />
+    {/* ---------- Static Pages ---------- */}
+    <PrivateRoute exact path='/about' component={About} />
+    <Route exact path='/privacy-policy' component={PrivacyPolicy} />
+    <Route component={FourZeroFour} />
+  </Switch>
 )
 
-export default Router
+export default Routes

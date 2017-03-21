@@ -1,0 +1,53 @@
+.footer
+{
+  width: 100%;
+  align-self: flex-end;
+  background: rgb(33, 33, 33);
+  color: #dcdcdc;
+  padding: 1rem;
+  text-align: center;
+}
+
+.subtext
+{
+  color: #969696;
+}
+
+.copyright
+{
+  font-size: 12px;
+  color: #969696;
+}
+
+.bottomRow
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.linkContainer a
+{
+  color: #969696;
+  margin-right: 5px;
+  font-size: 14px;
+  transition: color 0.3s ease-in-out;
+
+}
+
+.linkContainer a:hover
+{
+  color: #dcdcdc;
+}
+
+.linkContainer a::after
+{
+  padding-left: 5px;
+  content: '|';
+}
+
+.linkContainer a:last-child::after
+{
+  content: '';
+  padding: 0;
+}

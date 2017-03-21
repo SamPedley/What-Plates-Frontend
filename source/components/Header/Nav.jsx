@@ -4,10 +4,9 @@ import NavigationMenu from 'material-ui/svg-icons/navigation/menu'
 import { connect } from 'react-redux'
 
 import { toggleMenu } from 'actions'
-import s from './nav.css'
 
 const Nav = ({toggleMenu}) => (
-  <nav className={s.nav}>
+  <nav>
     <FlatButton
       icon={<NavigationMenu color='white' />}
       label='Menu'

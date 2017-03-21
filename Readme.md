@@ -18,48 +18,4 @@ WhatPlates.com
 * [Material-ui](http://www.material-ui.com/)
 * [PostCSS](http://postcss.org/)
 * [Webpack 2](https://webpack.js.org/)
-
----
-
-### Rough Redux object:
-
-``` JavaScript
-{
-  user: {
-    name: STRING,
-    email: STRING
-  },
-
-  userSettings: {
-    usingLbs: BOOLEAN,
-    showConversion: BOOLEAN,
-    roundUp: BOOLEAN,
-  },
-
-  sets: [
-    { total: FLOAT }
-  ],
-
-  plates: [
-    {
-      isLbs: BOOLEAN,
-      weight: BOOLEAN,
-      isActive: BOOLEAN
-    }
-  ],
-
-  bars: [
-    {
-      name: STRING,
-      inLbs: FLOAT,
-      inKg: FLOAT 
-    }
-  ],
-
-  ui: {
-    menuOpen: BOOLEAN,
-    helpModalOpen: BOOLEAN,
-  }
-
-}
-```
+* [Qwest](https://github.com/pyrsmk/qwest)

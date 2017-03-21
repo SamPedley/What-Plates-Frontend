@@ -4,7 +4,7 @@
   "display": "standalone",
   "lang": "en-US",
   "orientation": "any",
-  "prefer_related_applications": "false",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "icon.png",

@@ -1,4 +1,5 @@
 const { resolve } = require('path')
+const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = env => ({
@@ -9,11 +10,12 @@ module.exports = env => ({
   devServer: {
     historyApiFallback: true,
     noInfo: false,
-    stats: 'minimal'
+    stats: 'minimal',
+    port: 8010
   },
 
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     // sourceMapFilename: '[name].map',
     path: resolve('public'),
     publicPath: '/'
@@ -41,7 +43,15 @@ module.exports = env => ({
     ]
   },
 
-  plugins: [ new ExtractTextPlugin('styles.css') ],
+  plugins: [
+    new ExtractTextPlugin('[name].styles.css'),
+    new webpack.DefinePlugin({
+      'API_BASE_URL': env.prod ? `'https://api.whatplates.com'` : `'http://localhost:8020'`,
+      'DEBUG': !env.prod
+    }),
+
+    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor' })
+  ],
 
   devtool: env.prod ? 'source-map' : 'eval'
 })

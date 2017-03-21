@@ -9,6 +9,8 @@ const sets = (state = DEFAULT_STATE, action) => {
       return state.filter((set, index) => index !== action.index)
     case 'UPDATE_SET':
       return updateObjectInArray(state, action)
+    case 'UPDATE_SET_TOTAL':
+      return updateObjectInArray(state, action)
     default:
       return state
   }
